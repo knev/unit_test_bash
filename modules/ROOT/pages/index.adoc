@@ -1,6 +1,51 @@
 = Entropy
 :navtitle: Overview
-ifdef::page-component-version-is-latest[]
-:page-aliases: _@{page-component-name}::index.adoc
-endif::[]
 
+## Namespaces
+
+- Namespaces are tags and an index is found under __namespaces.md
+
+## repos
+
+- repos are found under .repo for now
+- each note has it's own repo, to avoid problems when sharing a note
+
+Starting the Entropy "Second Brain" requires a `<username>` and `<email>` per NAMESPACE (that is passed to git)
+- the email address is anonymized! `<username>@users.noreply.entropy`
+- 
+
+
+
+## Creating a NOTE
+
+* create local note folder: `/<notename>`
+* create metadata file: `__<notename>.md`
+	** add <namespace> as property tag
+* initial commit of 
+	** metadata: `__<notename>.md`
+	** initial note contents
+
+### When a NOTE changes or is shared
+
+NOTE: Otherwise, we have to create a repo for every file added, even potentially LARGE files
+
+// - create BARE git hub repo: `/.repo/<notename>/.`
+* create the local git hub repo in: `/<notename>/.`
+	** assign the username and anonymized email address corresponding to the namespace
+		*** `git config user.name <username>`
+		*** `git config user.email <email>`
+
+
+## Operations
+
+### Op: NOTE:RENAME
+
+Rename:
+
+* local note folder: `/<notename>`
+
+---
+
+### Op: NAMESPACE:CHANGE
+
+---
