@@ -1,0 +1,6 @@
+= Entropy
+:navtitle: Overview
+ifdef::page-component-version-is-latest[]
+:page-aliases: _@{page-component-name}::index.adoc
+endif::[]
+

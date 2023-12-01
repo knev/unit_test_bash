@@ -1,0 +1,5 @@
+name: Entropy
+title: Entropy
+version: "0.0"
+nav:
+- modules/ROOT/nav.adoc
