@@ -5,6 +5,97 @@
 
 - Namespaces are tags and an index is found under __namespaces.md
 
+---
+
+* domain: a major collection of namespaces, folders and notes: for work, home, PhD
+* namespace: collections of notes: Metaverse, Conferences, Logs, ...
+	** OS directory (no .md ext): idem as a namespace
+	** a note can only be in one namespace at a time
+* folder: ... idem as namespace?
+* note (OS directory with .md ext): 
+* attachment: 
+* section: a note can have several sections; each section is NOT a note, but can be promoted
+** is a section, just an attachment of type Markdown?
+
+## Architecture Design Records
+
+* Each file must reside in a node
+	** each file has related metadata 
+	** instead of having to work with extracting and purging git histories, each node is self contained
+		*** multiple files added to a node, means "extracting and purging git histories", if those files are moved
+* hardlinks between files in more than one location (keep your own DB of hardlinks); two different repos for the same file; give the user the option to break the link and make a copy instead
+	** if each file can be hardlinked to different places, then where is the git repo? 
+		*** It can't be in two repos at the same time can it? Yes, it can, but is there a point since the changes are duplicated?
+		*** what about for a shared note? when the shared note is changed, other links are also changed
+		*** what about if the user wants to have divergent copies e.g., the shared different than the local? must manually choose to split off the note and then the split off repo is a copy of the old
+		*** what if the files is in two different nodes, if it is hardlinked, and one of the versions changes, the other does too, is that what we want?
+		*** the file could have its own github repo, but then how is it handled with each of the note it is included in? merged?
+
+## TODO
+* a PDF reader plugin can read out the annotations and then inline them in the note like a section
+* from system_of_systems.pdf split out an article (corsaro2012-DDS -or- socio-technical SoS.pdf) and create a new note
+* write a note about a PDF
+* when text links to another note, should the other note automatically include the source text? in a section perhaps?
+* ~~tags~~ (no such thing as tags) need to be per username
+* if we have our local links, then they should be use links, but when they are shared to someone else, those links need a resource identifier of which user's brain it came from
+* you have two notes: Author and Concept, where does the publication go?! 
+	** under the Author, linked to Concept
+	** under the Concept, linked to Author
+	** We wanted the ability to naturally change the sorting: Pivot https://www.youtube.com/watch?v=qu-AK0Hv0b4
+	** a hard link; the file in two places at once
+* my handle is different per domain: knev or Kiim
+* what with links to file that changed. Perhaps the linked pieces is gone.
+* need a list of recent changes
+* the idea of plugins is kinda wrong; it needs to be a kind of blackboard pattern where different pieces of software can opperate on the same data
+* needs to be possible to share as READ-ONLY
+* if each note is only allowed to be in one domain, then each domain can be a subdir of the main folder
+	** do we really want to restrict a note to being in only one domain?
+
+* monitor open/close read/write for git commit: if external programs edit a file, it needs to be detected
+* test if you can have a collaborative editing Google Doc on a Google drive; perhaps you have to pay
+* the brain is a collection of different directories of notes, not just one: each collaborative shared folder is one
+* encrypted notes
+* public notes, published how? Saved Torrents?
+* should be able to create a brain for each of my kids
+* need lots of capture tools for text/audio/video to reduce the work required to enter information into the brain
+* second brain has people, but you want those poeple to also be populated in the OS'es contact app, same data
+* sometimes you need a tiny view of a note so that while you are transcribing, you can have the other window open big
+* templates: 
+	** comments on scientific articles
+	** dated log entries for communication
+* the folder view in Obsidian is stupid, it should be a configurable view e.g., all contacts, all proposals, ...	
+* there needs to be various granularites for adding a clipping from one note to another
+* instead of "note" a "concept" with "files"
+* use cases
+	** clean-up Download folders
+	** cleah-up NFO:Metaverse concept
+	** clean0up NFO:Sandbox
+	** clean up Thoughts in black and white.zip
+	** Fotos
+* "Online Dating" | tashiro2014-everafter.html is a file, not a concept, so it should be a hardlink under the "Online Dating" concept
+* file name should be: 
+	** tashiro2014-everafter.html 
+	** Ty Tashiro - "The Science of Happily Ever After: What Really Matters in the Quest for Enduring Love"
+	** "The Science of Happily Ever After: What Really Matters in the Quest for Enduring Love" - Ty Tashiro
+	** ? publication year also and any other meta data
+* how does 2nd brain relate to torrent saving/linking the entire Internet?
+* password protected notes
+* All the top Internet sites are entry points for the web; Second Brain needs entry points for each user (user chosen)
+* [[Interoperability|Interop, Metaverse]] vs [[Metaverse, Interoperability|Interop]]: the first is just display for Obsidian, the second, "Metaverse" gets hidden
+* mark a reference related to a particular topic (both where cited in the article and in reference list); a list of references gets generated on that topic page as a todo list. 
+	** you have research per topic
+	** but, you would still need to do the labor of searching, downloading and sorting the citation
+	** ?! how is the reference ID then set
+
+* IF I'M SHARING A NOTE WITH ONE person on a shared drive and I also have to share with a third person ON A DIFFERENT SHARED DRIVE!?	
+
+* dependent keywords: AI related to the Metaverse: ? AI[Metaverse]
+* for research, there should be multiple TODO lists per topic being researched; how?
+
+? a category does not have a git repo, but should probably remmeber a history of nodes/files that were there.
+
+* [Ecco Pro]
+
 ## repos
 
 - repos are found under .repo for now

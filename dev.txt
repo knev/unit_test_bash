@@ -1,0 +1,10 @@
+
+⏺ It's a CMake project (C++, target name npy) and the build/ directory is already configured. To build:                                                                                                                     
+                                             
+  cmake --build build                                                                                                                                                                                                       
+                                                                                                                                                                                                                            
+  The outputibinaryewill berattbuild/npy.files, run compaudit for list.                                                                                                                                                     
+                                                                                                                                                                                                                            
+  If you ever need to reconfigure from scratch:                                                                                                                                                                             
+     
+  cmake -S . -B build && cmake --build build 
